@@ -1,0 +1,242 @@
+body{
+    background: #d4e1e33c;
+    font-family: sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+#head-para{
+    color: #565555;
+}
+
+hr{
+    opacity: 0.5;
+}
+
+.box{
+    height: 87vh;
+    border: solid 1px #ffffff;
+    background: #ffffff;
+    margin: auto;
+    width: 440px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px #adadad;
+}
+
+input[type="text"]{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 180px;
+    border: solid 1px #adadad;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="password"]{
+    padding: 10px;
+    width: 360px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: solid 1px #adadad;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#form-para{
+    color: #565555;
+    transform: translateX(-150px);
+    font-size: 13px;
+}
+
+#form-para2{
+    color: #565555;
+    transform: translateX(-163px);
+    font-size: 13px;
+}
+
+#day{
+    padding: 10px;
+    width: 115px;
+    box-sizing: border-box;
+    border: solid 1px #adadad;
+    border-radius: 5px;
+    margin: 0 7px 0 0;
+}
+
+#month{
+    padding: 10px;
+    width: 115px;
+    box-sizing: border-box;
+    border: solid 1px #adadad;
+    border-radius: 5px;
+    margin: 0 7px 0 0;
+}
+
+#year{
+    padding: 10px;
+    width: 115px;
+    box-sizing: border-box;
+    border: solid 1px #adadad;
+    border-radius: 5px;
+}
+
+.gender{
+    border: solid 1px #adadad;
+    padding: 10px 15px;
+    width: 115px;
+    margin: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.note{
+    color: #565555;
+    font-size: 11px;
+    margin: 15px 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #04296dd4;
+}
+
+.button{
+    padding: 5px 60px;
+    font-weight: bold;
+    font-size: 18px;
+    background: #24b224;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.login{
+    color: #298ef4;
+    margin-top: 20px;
+}
+
+/* footer styling */
+
+.footer{
+    background: #ffffff;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.lang-link{
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 0 100px;
+}
+
+#eng{
+    color: #565555;
+    margin-right: 10px;
+}
+
+#foreign{
+    margin-right: 10px;
+}
+
+#foreign:hover{
+    text-decoration: underline #04296dd4;
+}
+
+#more{
+    padding: 0 9px;
+    background: #d4e1e33c;
+    border: solid 1px #adadad;
+}
+
+.other-link{
+    font-size: 13px;
+    margin: 10px;
+   border-radius: 3px;
+}
+
+#others{
+    margin-right: 20px;
+}
+
+#others:hover{
+    text-decoration: underline #04296dd4;
+}
+
+#meta{
+    font-size: 13px;
+    color: #565555;
+    margin: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    .box{
+        width: 300px;
+    }
+
+    footer{
+        visibility: hidden;
+    }
+
+    input[type="email"],
+    input[type="password"]{
+        padding: 10px;
+        width: 180px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border: solid 1px #adadad;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    #form-para{
+        color: #565555;
+        transform: translateX(-50px);
+        font-size: 13px;
+    }
+    
+    #form-para2{
+        color: #565555;
+        transform: translateX(-63px);
+        font-size: 13px;
+    }
+
+    #day{
+        width: 70px;
+    }
+
+    #month{
+        width: 70px;
+    }
+
+    #year{
+        width: 70px;
+    }
+
+    .gender{
+        width: 50px;
+        padding: 5px 10px;
+        margin: 3px;
+        font-size: 13px;
+    }
+
+    header img{
+        width: 200px;
+    }
+
+    .note{
+        visibility: hidden;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .button{
+        margin-top: 50px;
+    }
+}

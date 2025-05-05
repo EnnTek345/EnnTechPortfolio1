@@ -1,0 +1,139 @@
+body{
+    font-family: sans-serif;
+    background-color: #3e413e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container{
+    background: #1d1d1dbd;
+    padding: 50px;
+    width: 350px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px;
+}
+
+.calc-text{
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.calc-text input{
+    width: 75%;
+    font-size: 25px;
+    text-align: end;
+    background: #d3d3d3;
+    color: #000;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    /* word-wrap: break-word;
+    word-break: break-all; */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px #000;
+}
+
+button{
+    background: #333333;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 70%;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    box-shadow: 3px 5px 3px #000;
+}
+
+button:active,
+button:focus{
+    filter: brightness(120%);
+}
+
+.calc-keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+}
+
+.key-C,
+.key-equals{
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bolder;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px #000;
+}
+
+.clear{
+    background: #a565e0;
+    font-weight: bold;
+} 
+
+
+/* RESPONSIVENESS FOR MOBILE */
+
+@media screen and (max-width: 650px) {
+    .container{
+        background: #1d1d1dbd;
+        padding: 50px;
+        width: 200px;
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px;
+    }
+
+    .calc-text{
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+
+    .calc-text input{
+        width: 75%;
+        font-size: 20px;
+        text-align: end;
+        background: #d3d3d3;
+        color: #000;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        /* word-wrap: break-word;
+        word-break: break-all; */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 3px #000;
+    }
+
+    button{
+        background: #333333;
+        color: #fff;
+        font-size: 10px;
+        border: none;
+        border-radius: 70%;
+        cursor: pointer;
+        height: 45px;
+        width: 45px;
+        box-shadow: 3px 5px 3px #000;
+    }
+
+    .key-C,
+.key-equals{
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bolder;
+    font-size: 15px;
+    box-shadow: 3px 3px 3px #000;
+}
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counterdown Timer</title>
+    <style>
+        body{
+            background: linear-gradient(to right, cyan, blue);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrapper{
+            display: flex;
+            height: 70vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cont{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;         
+        }
+
+        h1{
+            text-align: center;
+            color: aliceblue;
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+        span{
+            font-size: 4rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .box{
+            background: #fff;
+            color: #000;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 5px 7px 10px;
+            cursor: pointer;
+            transition: 0.5s ease;
+          
+        }
+
+        .box:hover{
+            filter: brightness(150%);
+            background: #000;
+            color: #fff;
+            padding: 15px 35px;
+        }
+
+        /* responsiveness for tablet */
+
+        @media screen and (max-width: 1210px){
+        h1{
+            text-align: center;
+            color: aliceblue;
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        span{
+            font-size: 40px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .box{
+            background: #fff;
+            color: #000;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 5px 7px 10px;
+            cursor: pointer;
+            transition: 0.5s ease;
+          
+        }
+
+        /* responsiveness for mobile */
+        }
+
+        @media screen and (max-width: 750px) {
+            h1{
+            text-align: center;
+            color: aliceblue;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        span{
+            font-size: 17px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .box{
+            background: #fff;
+            color: #000;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 5px 7px 10px;
+            cursor: pointer;
+            transition: 0.5s ease;
+          
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Countdown to Nigeria Independence Day</h1>
+    <div class="cont" id="ended">
+        <span id="days" class="box">00</span>
+        <span>:</span>
+        <span id="hours" class="box">00</span>
+        <span>:</span>
+        <span id="min" class="box">00</span>
+        <span>:</span>
+        <span id="seconds" class="box">00</span>
+    </div>
+    </div>
+    
+
+    <script>
+        var schedule = new Date("January 1, 2025 12:00").getTime();
+
+        var t = setInterval(countdown)
+        function countdown(){
+            var now = new Date().getTime();
+            var difference = schedule - now;
+
+            // get dats from the time difference;
+            var days = Math.floor(difference/(1000*60*60*24));
+            // console.log(days);
+            var hour = Math.floor(difference % (1000*60*60*24)/(1000*60*60))
+            // console.log(hour)
+            var min = Math.floor(difference % (1000*60*60)/(1000*60))
+            // console.log(min)
+            var secs = Math.floor(difference % (1000*60)/1000)
+
+            document.getElementById('days').innerHTML=days + "<small>days</small>";
+            document.getElementById('hours').innerHTML=hour  + "<small>hrs</small>";; 
+            document.getElementById('min').innerHTML=min  + "<small>min</small>";;
+            document.getElementById('seconds').innerHTML=secs  + "<small>secs</small>";;
+        
+            if(difference <= 0){
+                document.getElementById('ended').innerHTML= "<p><h2>Happy Independence Day!</h2> Pray for your country oooo! We cannot continue like this!!"
+            }
+        
+        }
+
+        /*
+        24hr = 1day
+        1hr = 60min
+        1min = 60secs
+        1s = 1000mls
+        */
+    </script>
+</body>
+</html>

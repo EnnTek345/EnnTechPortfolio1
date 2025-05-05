@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+            align-items: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            text-align: center;
+            flex-direction: column;
+            height: 70vh;
+        }
+
+        .box{
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 30px;
+            background-color: crimson;
+        }
+
+        #numberBox{
+            padding: 10px 40px;
+            border: solid 2px #000;
+            border-radius: 5px;
+        }
+
+        #EnterBtn{
+            padding: 10px;
+            border: solid 2px #fff;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Guess a number between 1 and 50</h1>
+        <p>Enter a number:</p>
+        <input type="number" id="numberBox">
+        <button id="EnterBtn">Enter</button>
+        <p id="resultText"></p>
+        </div>
+    </div>
+
+    <script>
+        let compNum = Math.ceil(Math.random()*50);
+        let userNum = document.getElementById('numberBox').value
+        let btn = document.getElementById('EnterBtn')
+        let resultText = document.getElementById('resultText');
+
+        btn.addEventListener('click', function(){
+            let userNum = document.getElementById('numberBox').value
+            console.log(compNum)
+            if(userNum == compNum){
+                resultText.innerHTML="You Guessed Right!"
+            }
+
+            else if(userNum < compNum){
+                resultText.innerHTML = "Guess Higher"
+            }
+
+            else if(userNum > compNum){
+                resultText.innerHTML = "Guess Lower"
+            }
+        })
+    </script>
+</body>
+</html>

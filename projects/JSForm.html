@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        .firstform{
+            background: #5d5d5d;
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        h2{
+            text-align: center;
+        }
+        .cont{
+            width: 40%;
+            margin: auto;
+
+            /* display: flex; */
+            /* align-items: center; */
+            /* flex-direction: column; */
+            background: #000;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            border: 5px solid #fff;
+            box-shadow: 3px 7px 10px #000;
+        }
+
+        input{
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background: #292929; 
+        }
+
+        input[type=checkbox]{
+            margin-left: -47%;
+        }
+
+        input[type=submit]{
+            color: #292929;
+            background: #fff;
+            border: none;
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        #display1,
+        #display2,
+        #display3{
+            color: red;
+        }
+
+        #error{
+            color: crimson;
+        }
+
+        .secondform{
+            background: #000;
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        .cont2{
+            width: 40%;
+            margin: auto;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            background: #5d5d5d;
+            border: 5px solid #fff;
+            box-shadow: 3px 7px 10px #000;
+        }
+
+        .darkside{
+            background: #000;
+        }
+
+        @media screen and (max-width:1000px) {
+            .cont,
+            .cont2{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="firstform">
+        <form action="" name="form0" onsubmit="return pass()">
+            <h2>Hide or Show Password</h2>
+            <div class="cont">
+                <p>
+                    Enter your Email
+                    <input type="email" name="email">
+                </p>
+                <p>Password
+                    <input type="password" name="show" id="show">
+                    <p id="error"></p>
+                </p>
+                Show Password<input type="checkbox" id="godwin">
+                <input type="submit" value="login">
+        
+            </div>
+        </form>
+    </div>
+    
+
+       <!-- JavaScript form validation -->
+
+       <div class="secondform">
+        <form action="" name="form1" onsubmit="return validateForm()">
+            <h2>Validate Password</h2>
+            <div class="cont2">
+                <p>First Name:
+                    <input type="text" name="fname" class="darkside">
+                    <p id="display1"></p>
+                </p>
+                <p>
+                    Last Name:
+                    <input type="text" name="lname"class="darkside">
+                    <p id="display2"></p>
+                </p>
+                <p>
+                    Email:
+                    <input type="email" name="email" class="darkside">
+                    <p id="display3"></p>
+                </p>
+                <p>
+                    <input type="submit" value="Send Message">
+                </p>
+            </form>
+            </div>
+       </div>
+
+    
+  
+    <script>
+        // function showPass(){
+        //     var show = document.getElementById('show');
+        //     if(show.type == 'password'){
+        //         show.type = 'text'
+        //     }
+
+        //     else{
+        //         show.type = 'password'
+        //     }
+        // }
+
+        var godwin = document.getElementById('godwin');
+        var show = document.getElementById('show');
+        godwin.addEventListener('click', function(){
+            if(show.type == 'password'){
+                show.type = 'text'
+            }
+            else{
+                show.type = 'password'
+            }
+        })
+
+
+        function pass(){
+      let passLength = document.forms['form0']['show'].value;
+      
+      if(passLength.length < 6){
+        document.getElementById('error').innerText='password cannot be less than 6 characters'
+        return false;
+      }
+
+      if(passLength.length > 20){
+        document.getElementById('error').innerText='password cannot be more than 20 characters'
+        return false;
+      }
+        }
+
+        
+        
+
+
+        // Form Validation
+
+        function validateForm(){
+            const firstName = document.forms['form1']['fname'].value;
+            const lastName = document.forms['form1']['lname'].value;
+            const email = document.forms['form1']['email'].value;
+
+            if(firstName == ''){
+                // alert("First name must be filled")
+                document.getElementById('display1').innerText= 'Required!'
+                return false;
+            }
+
+            if(lastName == ''){
+                // alert("Last name must be filled")
+                document.getElementById('display2').innerText = 'Required!'
+                return false;
+            }
+
+            if(email == ''){
+                // alert("Email name must be filled")
+                document.getElementById('display3').innerText= 'Required!'
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>

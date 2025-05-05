@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calculator - EnnTech</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calc-text">
+            <input type="text" id="user-input" placeholder="0">
+        </div>
+
+        <div class="calc-keys">
+            <button onclick="clearr()" class="key-C  operators">Clear</button>
+            <button onclick="del()" class="clear  operators">&lt; &lt;</button>
+            <button onclick="calculate('/')" class="operators">/</button>
+            <button onclick="calculate(7)" class="num">7</button>
+            <button onclick="calculate(8)" class="num">8</button>
+            <button onclick="calculate(9)" class="num">9</button>
+            <button onclick="calculate('*')" class="operators">*</button>
+            <button onclick="calculate(4)" class="num">4</button>
+            <button onclick="calculate(5)" class="num">5</button>
+            <button onclick="calculate(6)" class="num">6</button>
+            <button onclick="calculate('-')" class="operators">-</button>
+            <button onclick="calculate(1)" class="num">1</button>
+            <button onclick="calculate(2)" class="num">2</button>
+            <button onclick="calculate(3)" class="num">3</button>
+            <button onclick="calculate('+')" class="operators">+</button>
+            <button onclick="calculate('.')" class="num">.</button>
+            <button onclick="calculate(0)" class="num">0</button>
+            <button class="key-equals  operators" onclick="answer()">=</button>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+    margin: 50px 0;
+}
+
+div{
+    text-align: center;
+    margin: auto;
+}
+
+img{
+    margin-bottom: 20px;
+}
+
+.box{
+    text-align: center;
+    height: 45vh;
+    border: solid 1px #bdbdbd;
+    width: 300px;
+    padding: 40px;
+    align-items: center;
+}
+
+input{
+    width: 250px;
+    padding: 10px;
+    background: #cecdcd3d;
+    border: solid 1px #d3d3d3;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+input[type="email"]{
+    margin-bottom: 0;
+}
+
+input[type="submit"]{
+    background-color: #57a7f7;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+#option{
+    color: #777676;
+    font-size: 13px;
+}
+
+#fblog{
+    color: #04296dd4;
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#forgot-pass{
+    color: #04296dd4;
+    font-size: 13px;
+}
+
+.smallbox{
+    border: solid 1px #bdbdbd;
+    width: 300px;
+    padding: 10px 40px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#signup{
+    color: #4a9ef1;
+}
+
+#f-link{
+    color: #777676;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+#f-link:hover{
+    text-decoration: underline #000000;
+}
+
+#foot-link{
+    color: #777676;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.footer-para{
+    color: #777676;
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+
+#lang{
+    border: none;
+    color: #777676;
+    padding: 0;
+}
+
+@media screen and (max-width:1000px) {
+    .box{
+        text-align: center;
+        height: 45vh;
+        border: solid 1px #bdbdbd;
+        width: 200px;
+        padding: 40px;
+        align-items: center;
+    }
+    
+    input{
+        width: 200px;
+        padding: 10px;
+        background: #cecdcd3d;
+        border: solid 1px #d3d3d3;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+
+    .smallbox{
+        border: solid 1px #bdbdbd;
+        width: 200px;
+        padding: 10px 40px;
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    #f-link{
+        color: #777676;
+        margin-right: 10px;
+        font-size: 13px;
+    }
+
+    img{
+        margin-bottom: 20px;
+        width: 100px;
+    }
+
+    footer{
+        visibility: hidden;
+    }
+}
